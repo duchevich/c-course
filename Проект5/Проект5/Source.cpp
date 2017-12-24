@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
 using namespace std;
 
@@ -11,15 +11,15 @@ struct student {
 void main()
 {
 	setlocale(0, "");
-	cout << "Ââåä³òü ³íôîðìàö³þ " << endl;
-	cout << "Ïð³çâèùå òà ³í³ö³àëè ";
+	cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ñ–Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ñ–ÑŽ " << endl;
+	cout << "ÐŸÑ€Ñ–Ð·Ð²Ð¸Ñ‰Ðµ Ñ‚Ð° Ñ–Ð½Ñ–Ñ†Ñ–Ð°Ð»Ð¸ ";
 	getline(cin, st1.pib);
-	cout << "Îö³íêè " << endl;
-	cout << "Ìàòåìàòèêà " << endl;
+	cout << "ÐžÑ†Ñ–Ð½ÐºÐ¸ " << endl;
+	cout << "ÐœÐ°Ñ‚ÐµÐ¼Ð°Ñ‚Ð¸ÐºÐ° " << endl;
 	cin >> st1.mat;
-	cout << "Ô³çèêà " << endl;
+	cout << "Ð¤Ñ–Ð·Ð¸ÐºÐ° " << endl;
 	cin >> st1.fiz;
-	cout << "Ïðîãðàìóâàííÿ" << endl;
+	cout << "ÐŸÑ€Ð¾Ð³Ñ€Ð°Ð¼ÑƒÐ²Ð°Ð½Ð½Ñ" << endl;
 	cin >> st1.prg;
 	st1.sb = float(st1.fiz + st1.mat + st1.prg) / 3;
 	cout << st1.pib << "\t" << st1.mat << "\t" << st1.fiz << "\t" << st1.prg << "\t" << st1.sb << endl;

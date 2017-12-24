@@ -1,5 +1,5 @@
-/*
-2. Визначити кількість листків дерева степеня 3, заданого в розширеній стандартній формі.
+п»ї/*
+2. Р’РёР·РЅР°С‡РёС‚Рё РєС–Р»СЊРєС–СЃС‚СЊ Р»РёСЃС‚РєС–РІ РґРµСЂРµРІР° СЃС‚РµРїРµРЅСЏ 3, Р·Р°РґР°РЅРѕРіРѕ РІ СЂРѕР·С€РёСЂРµРЅС–Р№ СЃС‚Р°РЅРґР°СЂС‚РЅС–Р№ С„РѕСЂРјС–.
 */
 
 #include <iostream>
@@ -55,12 +55,12 @@ void printTreeCount(treep root, int &count, int fl)
 void main()
 {
 	setlocale(0, "");
-	cout << "Введіть рівень та символ" << endl;
+	cout << "Р’РІРµРґС–С‚СЊ СЂС–РІРµРЅСЊ С‚Р° СЃРёРјРІРѕР»" << endl;
 	scanf_s("%d %d", &level, &value);
 	treep root = createTree(0, NULL);
 	int count = 0;
 	int fl = 0;
 	printTreeCount(root, count, fl);
-	cout << "Кількість листків: " << count << endl;
+	cout << "РљС–Р»СЊРєС–СЃС‚СЊ Р»РёСЃС‚РєС–РІ: " << count << endl;
 	system("pause");
 }

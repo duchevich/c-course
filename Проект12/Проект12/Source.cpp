@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<string>
 using namespace std;
 
@@ -11,27 +11,27 @@ typedef struct film
 
 filmp create_list()
 {
-	cout << "Ââåäiòü åëåìåíòè ñïèñêó:" << endl;
+	cout << "Ð’Ð²ÐµÐ´iÑ‚ÑŒ ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¸ ÑÐ¿Ð¸ÑÐºÑƒ:" << endl;
 	filmp p, q, dl;
 	p = new film;
 	dl = p;
-	cout << "íàçâà ô³ëüìó: ";
+	cout << "Ð½Ð°Ð·Ð²Ð° Ñ„Ñ–Ð»ÑŒÐ¼Ñƒ: ";
 	cin >> p->name;
-	cout << "ðåéòèíã ô³ëüìó: ";
+	cout << "Ñ€ÐµÐ¹Ñ‚Ð¸Ð½Ð³ Ñ„Ñ–Ð»ÑŒÐ¼Ñƒ: ";
 	cin >> p->rating;
 	p->next = NULL;
 	char c;
-	cout << "Áóäå íàñòóïíèé åëåìåíò? (Y/N) "; cin >> c;
+	cout << "Ð‘ÑƒÐ´Ðµ Ð½Ð°ÑÑ‚ÑƒÐ¿Ð½Ð¸Ð¹ ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚? (Y/N) "; cin >> c;
 	while ((c == 'y') || (c == 'Y')) {
 		q = new film;
-		cout << "íàçâà ô³ëüìó: ";
+		cout << "Ð½Ð°Ð·Ð²Ð° Ñ„Ñ–Ð»ÑŒÐ¼Ñƒ: ";
 		cin >> q->name;
-		cout << "ðåéòèíã ô³ëüìó: ";
+		cout << "Ñ€ÐµÐ¹Ñ‚Ð¸Ð½Ð³ Ñ„Ñ–Ð»ÑŒÐ¼Ñƒ: ";
 		cin >> q->rating;
 		q->next = NULL;
 		p->next = q;
 		p = q;
-		cout << "Áóäå íàñòóïíèé åëåìåíò? (Y/N) "; cin >> c;
+		cout << "Ð‘ÑƒÐ´Ðµ Ð½Ð°ÑÑ‚ÑƒÐ¿Ð½Ð¸Ð¹ ÐµÐ»ÐµÐ¼ÐµÐ½Ñ‚? (Y/N) "; cin >> c;
 	}
 	return dl;
 }
@@ -39,11 +39,11 @@ filmp create_list()
 void print(filmp p)
 {
 	filmp q;
-	if (p == NULL) cout << "Äàí³ íå ââåäåí³" << endl;
+	if (p == NULL) cout << "Ð”Ð°Ð½Ñ– Ð½Ðµ Ð²Ð²ÐµÐ´ÐµÐ½Ñ–" << endl;
 	q = p;
 	while (q != NULL) {
-		cout << "íàçâà ô³ëüìó: " << q->name << endl;
-		cout << "ðåéòèíã ô³ëüìó: " << q->rating << endl;
+		cout << "Ð½Ð°Ð·Ð²Ð° Ñ„Ñ–Ð»ÑŒÐ¼Ñƒ: " << q->name << endl;
+		cout << "Ñ€ÐµÐ¹Ñ‚Ð¸Ð½Ð³ Ñ„Ñ–Ð»ÑŒÐ¼Ñƒ: " << q->rating << endl;
 		q = q->next;
 	}
 }

@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 #define N 100
@@ -14,7 +14,7 @@ int main()
 	int m[N];
 	int a = 0;
 	int nod = 0;
-	cout << "Ââåäiòü çíà÷åííÿ ïîøóêó" << endl;
+	cout << "Ð’Ð²ÐµÐ´iÑ‚ÑŒ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð½Ñ Ð¿Ð¾ÑˆÑƒÐºÑƒ" << endl;
 	cin >> nod;
 
 	massiv(m, a);
@@ -32,9 +32,9 @@ int main()
 
 void massiv(int arr[N], int &a)
 {
-	cout << "Ââåäiòü ðîçì³ð ìàñèâó";
+	cout << "Ð’Ð²ÐµÐ´iÑ‚ÑŒ Ñ€Ð¾Ð·Ð¼Ñ–Ñ€ Ð¼Ð°ÑÐ¸Ð²Ñƒ";
 	cin >> a;
-	cout << "Ââåäiòü çíà÷åííÿ ìàñèâó";
+	cout << "Ð’Ð²ÐµÐ´iÑ‚ÑŒ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð½Ñ Ð¼Ð°ÑÐ¸Ð²Ñƒ";
 	for (int i = 0; i < a; i++) {
 		cout << "[" << i + 1 << "]" << ": ";
 		cin >> arr[i];
@@ -47,7 +47,7 @@ void massiv(int arr[N], int &a)
 	while (first < last) {
 		int s = (first + last) / 2;
 		if (arr[s] == nod) {
-			cout << "×èñëî çíàéäåíå!!!!" << endl;
+			cout << "Ð§Ð¸ÑÐ»Ð¾ Ð·Ð½Ð°Ð¹Ð´ÐµÐ½Ðµ!!!!" << endl;
 			break;
 		}
 		else if (arr[s] > nod) 
@@ -56,5 +56,5 @@ void massiv(int arr[N], int &a)
 			first = s + 1;
 	}
 	if (first >= last)
-		cout << "×èñëî íå çíàéäåíå" << endl;
+		cout << "Ð§Ð¸ÑÐ»Ð¾ Ð½Ðµ Ð·Ð½Ð°Ð¹Ð´ÐµÐ½Ðµ" << endl;
 }

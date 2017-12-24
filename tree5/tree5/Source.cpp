@@ -1,5 +1,5 @@
-/*
-5. Організувати пошук вузла бінарного дерева, сума значень прямих нащадків якого є максимальною.
+п»ї/*
+5. РћСЂРіР°РЅС–Р·СѓРІР°С‚Рё РїРѕС€СѓРє РІСѓР·Р»Р° Р±С–РЅР°СЂРЅРѕРіРѕ РґРµСЂРµРІР°, СЃСѓРјР° Р·РЅР°С‡РµРЅСЊ РїСЂСЏРјРёС… РЅР°С‰Р°РґРєС–РІ СЏРєРѕРіРѕ С” РјР°РєСЃРёРјР°Р»СЊРЅРѕСЋ.
 */
 
 #include <iostream>
@@ -49,7 +49,7 @@ void createSortTree(nodePointer &root)
 	int val;
 	cin >> input;
 	while (input[0] >= '0' && input[0] <= '9'){
-		cout << "Введіть значення: " << endl;
+		cout << "Р’РІРµРґС–С‚СЊ Р·РЅР°С‡РµРЅРЅСЏ: " << endl;
 		val = atoi(input);
 		insertNode(root, val);
 		cin >> input;
@@ -61,7 +61,7 @@ void createTree(nodePointer &root)
 	char input[10];
 	int val;
 	do {
-		cout << "Введіть значення: " << endl;
+		cout << "Р’РІРµРґС–С‚СЊ Р·РЅР°С‡РµРЅРЅСЏ: " << endl;
 		cin >> input;
 		val = atoi(input);
 		insertNode(root, val);

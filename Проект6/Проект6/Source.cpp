@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include<string>
 #define N 3
 using namespace std;
@@ -14,30 +14,30 @@ void main()
 	int i, sm = 0, sf = 0, sp = 0;
 	setlocale(0, "");
 	for (int i = 0; i < N; i++) {
-		cout << "Ââåä³òü ³íôîðìàö³þ ïðî " <<  i+1 << "ñòóäåíòà" << endl;
-		cout << "Ïð³çâèùå òà ³í³ö³àëè ";
+		cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ñ–Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ñ–ÑŽ Ð¿Ñ€Ð¾ " <<  i+1 << "ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°" << endl;
+		cout << "ÐŸÑ€Ñ–Ð·Ð²Ð¸Ñ‰Ðµ Ñ‚Ð° Ñ–Ð½Ñ–Ñ†Ñ–Ð°Ð»Ð¸ ";
 		cin >> spisok[i].pib;
-		cout << "Îö³íêè " << endl;
-		cout << "Ìàòåìàòèêà " << endl;
+		cout << "ÐžÑ†Ñ–Ð½ÐºÐ¸ " << endl;
+		cout << "ÐœÐ°Ñ‚ÐµÐ¼Ð°Ñ‚Ð¸ÐºÐ° " << endl;
 		cin >> spisok[i].mat;
-		cout << "Ô³çèêà " << endl;
+		cout << "Ð¤Ñ–Ð·Ð¸ÐºÐ° " << endl;
 		cin >> spisok[i].fiz;
-		cout << "Ïðîãðàìóâàííÿ" << endl;
+		cout << "ÐŸÑ€Ð¾Ð³Ñ€Ð°Ð¼ÑƒÐ²Ð°Ð½Ð½Ñ" << endl;
 		cin >> spisok[i].prg;
 		spisok[i].sb = float(spisok[i].fiz + spisok[i].mat + spisok[i].prg) / 3;
 		sm += spisok[i].mat;
 		sf += spisok[i].fiz;
 		sp += spisok[i].prg;
 	}
-	cout << "Ðåçóëüòàò ñåññ³¿ " << endl;
-	cout << "¹" << " ïðiçâèùå " << "ìàòåìàòèêà " << "ôiçèêà " << "ïðîãðàìóâàííÿ " << "ñåðåäíié áàë"
+	cout << "Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ ÑÐµÑÑÑ–Ñ— " << endl;
+	cout << "â„–" << " Ð¿Ñ€iÐ·Ð²Ð¸Ñ‰Ðµ " << "Ð¼Ð°Ñ‚ÐµÐ¼Ð°Ñ‚Ð¸ÐºÐ° " << "Ñ„iÐ·Ð¸ÐºÐ° " << "Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼ÑƒÐ²Ð°Ð½Ð½Ñ " << "ÑÐµÑ€ÐµÐ´Ð½iÐ¹ Ð±Ð°Ð»"
 		<< endl;
 	for (i = 0; i < N; i++) cout << i + 1 << " " << spisok[i].pib << "\t" << spisok[i].mat << "\t" << spisok[i].fiz <<
 		"\t" << spisok[i].prg << "\t" << (float)spisok[i].sb << endl;
-	cout << "Ñðåäíié áàë ãðóïè ç ìàòåìàòèêè = " << (float)sm / N << endl;
-	cout << "Ñðåäíié áàë ãðóïè ç ôiçèêè = " << (float)sf / N << endl;
-	cout << "Ñðåäíié áàë ãðóïè ç ïðîãðàìóâàííÿ = " << (float)sp / N << endl;
-	cout << "Âiäìiííèêè ç ïðîãðàìóâàííÿ: " << endl;
+	cout << "Ð¡Ñ€ÐµÐ´Ð½iÐ¹ Ð±Ð°Ð» Ð³Ñ€ÑƒÐ¿Ð¸ Ð· Ð¼Ð°Ñ‚ÐµÐ¼Ð°Ñ‚Ð¸ÐºÐ¸ = " << (float)sm / N << endl;
+	cout << "Ð¡Ñ€ÐµÐ´Ð½iÐ¹ Ð±Ð°Ð» Ð³Ñ€ÑƒÐ¿Ð¸ Ð· Ñ„iÐ·Ð¸ÐºÐ¸ = " << (float)sf / N << endl;
+	cout << "Ð¡Ñ€ÐµÐ´Ð½iÐ¹ Ð±Ð°Ð» Ð³Ñ€ÑƒÐ¿Ð¸ Ð· Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼ÑƒÐ²Ð°Ð½Ð½Ñ = " << (float)sp / N << endl;
+	cout << "Ð’iÐ´Ð¼iÐ½Ð½Ð¸ÐºÐ¸ Ð· Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼ÑƒÐ²Ð°Ð½Ð½Ñ: " << endl;
 	for (i = 0; i < N; i++) if (spisok[i].prg == 5) cout << spisok[i].pib << endl;
 	system("pause");
 }

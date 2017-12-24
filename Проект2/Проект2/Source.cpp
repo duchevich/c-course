@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 float func(float);
@@ -11,13 +11,13 @@ int main()
 	setlocale(0, "");
 	float k;
 	int n;
-	cout << "Ââåäèòå çíà÷åíèå ïåðåìåííîé "; 
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð¿ÐµÑ€ÐµÐ¼ÐµÐ½Ð½Ð¾Ð¹ "; 
 	cin >> k;
-	cout << "Ââåäèòå êðàéíåå çíà÷åíèå îòðåçêà "; 
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÑ€Ð°Ð¹Ð½ÐµÐµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð¾Ñ‚Ñ€ÐµÐ·ÐºÐ° "; 
 	cin >> n;
 	print(k, n);
-	cout << "Ìàêñèìàëüíîå çíà÷åíèå " << max(k, n) << endl; 
-	cout << "Ñóìà êâàäðàòîâ " << sum(k, n) << endl;
+	cout << "ÐœÐ°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ " << max(k, n) << endl; 
+	cout << "Ð¡ÑƒÐ¼Ð° ÐºÐ²Ð°Ð´Ñ€Ð°Ñ‚Ð¾Ð² " << sum(k, n) << endl;
 	system("pause");
 	return 0;
 }

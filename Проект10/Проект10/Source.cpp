@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 using namespace std;
 
 #define N 100
@@ -18,7 +18,7 @@ int main()
 	int m[N];
 	int a = 0;
 	//int nod = 0;
-	//cout << "Введіть число пошуку" << endl;
+	//cout << "Р’РІРµРґС–С‚СЊ С‡РёСЃР»Рѕ РїРѕС€СѓРєСѓ" << endl;
 	//cin >> nod;
 
 	massiv(m, a);
@@ -39,28 +39,28 @@ int main()
 
 	return 0;
 }
-// функція для введення массиву
+// С„СѓРЅРєС†С–СЏ РґР»СЏ РІРІРµРґРµРЅРЅСЏ РјР°СЃСЃРёРІСѓ
 void enter_massiv(int arr[N], int &a)
 {
-	cout << "Введіть розмір массиву";
+	cout << "Р’РІРµРґС–С‚СЊ СЂРѕР·РјС–СЂ РјР°СЃСЃРёРІСѓ";
 	cin >> a;
-	cout << "Введіть массив";
+	cout << "Р’РІРµРґС–С‚СЊ РјР°СЃСЃРёРІ";
 	for (int i = 0; i < a; i++) {
 		cout << "[" << i + 1 << "]" << ": ";
 		cin >> arr[i];
 	}
 }
-// функція для автоматичного введення массиву
+// С„СѓРЅРєС†С–СЏ РґР»СЏ Р°РІС‚РѕРјР°С‚РёС‡РЅРѕРіРѕ РІРІРµРґРµРЅРЅСЏ РјР°СЃСЃРёРІСѓ
 void auto_enter_massiv(int arr[N], int &a)
 {
-	cout << "Введіть розмір массиву";
+	cout << "Р’РІРµРґС–С‚СЊ СЂРѕР·РјС–СЂ РјР°СЃСЃРёРІСѓ";
 	cin >> a;
 	for (int i = 0; i < a; i++) {
 		
 		cin >> arr[i];
 	}
 }
-// функція друку массиву
+// С„СѓРЅРєС†С–СЏ РґСЂСѓРєСѓ РјР°СЃСЃРёРІСѓ
 void print_massiv(int arr[N], int &a)
 {
 	for (int i = 0; i < a; i++) {
@@ -69,25 +69,25 @@ void print_massiv(int arr[N], int &a)
 	}
 	cout << endl;
 }
-// лінійний пошук
+// Р»С–РЅС–Р№РЅРёР№ РїРѕС€СѓРє
 int linear_search(int arr[N], int &a, int &nod) {
 	for (int i = 0; i < a; i++) {
 		if (arr[i] == nod) {
-			cout << "Голка знайдена!!!!" << endl;
+			cout << "Р“РѕР»РєР° Р·РЅР°Р№РґРµРЅР°!!!!" << endl;
 			return 0;
 		}
 	}
-	cout << "Голка не знайдена" << endl;
+	cout << "Р“РѕР»РєР° РЅРµ Р·РЅР°Р№РґРµРЅР°" << endl;
 	return 1;
 }
-// бінарний пошук
+// Р±С–РЅР°СЂРЅРёР№ РїРѕС€СѓРє
 void binary_search(int arr[N], int &a, int &nod) {
 	int first = 0;
 	int last = a;
 	while (first < last) {
 		int s = (first + last) / 2;
 		if (arr[s] == nod) {
-			cout << "Голка знайдена!!!!" << endl;
+			cout << "Р“РѕР»РєР° Р·РЅР°Р№РґРµРЅР°!!!!" << endl;
 			break;
 		}
 		else if (arr[s] > nod)
@@ -96,9 +96,9 @@ void binary_search(int arr[N], int &a, int &nod) {
 			first = s + 1;
 	}
 	if (first >= last)
-		cout << "Голка не знайдена" << endl;
+		cout << "Р“РѕР»РєР° РЅРµ Р·РЅР°Р№РґРµРЅР°" << endl;
 }
-// сортування бульбашкою
+// СЃРѕСЂС‚СѓРІР°РЅРЅСЏ Р±СѓР»СЊР±Р°С€РєРѕСЋ
 void bulb_sort(int arr[N], int &n)
 {
 	int j = 0, c;

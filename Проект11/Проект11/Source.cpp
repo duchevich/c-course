@@ -1,4 +1,4 @@
-#include<iostream>
+п»ї#include<iostream>
 using namespace std;
 
 typedef struct list
@@ -9,24 +9,24 @@ typedef struct list
 
 listp create_list()
 {
-	cout << "Введите элементы списка: " << endl;
+	cout << "Р’РІРµРґРёС‚Рµ СЌР»РµРјРµРЅС‚С‹ СЃРїРёСЃРєР°: " << endl;
 	listp p, q, dl;
 	p = new list;
 	dl = p;
-	cout << "значення: ";
+	cout << "Р·РЅР°С‡РµРЅРЅСЏ: ";
 	cin >> p->val;
 	p->next = NULL;
 	char c;
-	cout << "Буде наступний елемент? (Y/N) "; 
+	cout << "Р‘СѓРґРµ РЅР°СЃС‚СѓРїРЅРёР№ РµР»РµРјРµРЅС‚? (Y/N) "; 
 	cin >> c;
 	while ((c == 'y') || (c == 'Y')) {
 		q = new list;
-		cout << "значення: ";
+		cout << "Р·РЅР°С‡РµРЅРЅСЏ: ";
 		cin >> q->val;
 		q->next = NULL;
 		p->next = q;
 		p = q;
-		cout << "Буде наступний елемент? (Y/N) "; 
+		cout << "Р‘СѓРґРµ РЅР°СЃС‚СѓРїРЅРёР№ РµР»РµРјРµРЅС‚? (Y/N) "; 
 		cin >> c;
 	}
 	return dl;
@@ -34,10 +34,10 @@ listp create_list()
 void print(listp p)
 {
 	listp q;
-	if (p == NULL) cout << "Дані не введені" << endl;
+	if (p == NULL) cout << "Р”Р°РЅС– РЅРµ РІРІРµРґРµРЅС–" << endl;
 	q = p;
 	while (q != NULL) {
-		cout << "значення: " << q->val << endl;
+		cout << "Р·РЅР°С‡РµРЅРЅСЏ: " << q->val << endl;
 		q = q->next;
 	}
 }
@@ -66,14 +66,14 @@ void main()
 	listp dl, p;
 	int k;
 	setlocale(LC_ALL, "RUS");
-	cout << "Введіть інформацію" << endl;
+	cout << "Р’РІРµРґС–С‚СЊ С–РЅС„РѕСЂРјР°С†С–СЋ" << endl;
 	p = create_list();
 	print(p);
-	cout << "Додати новий елемент "; cin >> k;
+	cout << "Р”РѕРґР°С‚Рё РЅРѕРІРёР№ РµР»РµРјРµРЅС‚ "; cin >> k;
 	Add_node(p, k);
 	print(p);
-	cout << "Видалити елемент " << endl;
-	p = Del_node(p, p->next); // видалення другого елементу списку
+	cout << "Р’РёРґР°Р»РёС‚Рё РµР»РµРјРµРЅС‚ " << endl;
+	p = Del_node(p, p->next); // РІРёРґР°Р»РµРЅРЅСЏ РґСЂСѓРіРѕРіРѕ РµР»РµРјРµРЅС‚Сѓ СЃРїРёСЃРєСѓ
 	print(p);
 	system("pause");
 }

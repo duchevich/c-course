@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 #define N 100
@@ -25,9 +25,9 @@ int main()
 
 void massiv(int arr[N], int &a)
 {
-	cout << "Ââåäiòü ðîçì³ð ìàñèâó";
+	cout << "Ð’Ð²ÐµÐ´iÑ‚ÑŒ Ñ€Ð¾Ð·Ð¼Ñ–Ñ€ Ð¼Ð°ÑÐ¸Ð²Ñƒ";
 	cin >> a;
-	cout << "Ââåäiòü çíà÷åííÿ ìàñèâó";
+	cout << "Ð’Ð²ÐµÐ´iÑ‚ÑŒ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð½Ñ Ð¼Ð°ÑÐ¸Ð²Ñƒ";
 	for (int i = 0; i < a; i++) {
 		cout << "[" << i + 1 << "]" << ": ";
 		cin >> arr[i];
