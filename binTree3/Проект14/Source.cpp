@@ -1,5 +1,5 @@
 /*
-3. Задано бінарне дерево. Визначити, чи є в цьому дереві хоч би два однакові елементи. 
+3. Р—Р°РґР°РЅРѕ Р±С–РЅР°СЂРЅРµ РґРµСЂРµРІРѕ. Р’РёР·РЅР°С‡РёС‚Рё, С‡Рё С” РІ С†СЊРѕРјСѓ РґРµСЂРµРІС– С…РѕС‡ Р±Рё РґРІР° РѕРґРЅР°РєРѕРІС– РµР»РµРјРµРЅС‚Рё. 
 */
 
 #include <iostream>
@@ -15,7 +15,7 @@ typedef struct node {
 
 void createArray(int arr[N], int &n)
 {
-	printf("Введіть довжину массиву: ");
+	printf("Р’РІРµРґС–С‚СЊ РґРѕРІР¶РёРЅСѓ РјР°СЃСЃРёРІСѓ: ");
 	scanf_s("%d", &n);
 	for (int i = 0; i < n; i++) {
 		scanf_s("%d", &arr[i]);
@@ -138,7 +138,7 @@ void goToTree(nodePointer tree)
 		int val = tree->val;
 		repeatTree(tree, val, count);
 		if (count > 1) {
-			cout << "Елемент " << val << ". Повторів: " << count << endl;
+			cout << "Р•Р»РµРјРµРЅС‚ " << val << ". РџРѕРІС‚РѕСЂС–РІ: " << count << endl;
 		}
 	}
 	goToTree(tree->l);

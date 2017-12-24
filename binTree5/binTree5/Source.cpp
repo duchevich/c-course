@@ -1,7 +1,7 @@
 /*
-5. Побудувати двійкове дерево пошуку з букв рядка, що вводиться. Вивести його на екран у вигляді дерева.
-	Знайти букви, що зустрічаються більше одного разу. Видалити з дерева ці літери. Вивести елементи дерева, що залишилися, 
-	при його проході в оберненому порядку.
+5. РџРѕР±СѓРґСѓРІР°С‚Рё РґРІС–Р№РєРѕРІРµ РґРµСЂРµРІРѕ РїРѕС€СѓРєСѓ Р· Р±СѓРєРІ СЂСЏРґРєР°, С‰Рѕ РІРІРѕРґРёС‚СЊСЃСЏ. Р’РёРІРµСЃС‚Рё Р№РѕРіРѕ РЅР° РµРєСЂР°РЅ Сѓ РІРёРіР»СЏРґС– РґРµСЂРµРІР°.
+	Р—РЅР°Р№С‚Рё Р±СѓРєРІРё, С‰Рѕ Р·СѓСЃС‚СЂС–С‡Р°СЋС‚СЊСЃСЏ Р±С–Р»СЊС€Рµ РѕРґРЅРѕРіРѕ СЂР°Р·Сѓ. Р’РёРґР°Р»РёС‚Рё Р· РґРµСЂРµРІР° С†С– Р»С–С‚РµСЂРё. Р’РёРІРµСЃС‚Рё РµР»РµРјРµРЅС‚Рё РґРµСЂРµРІР°, С‰Рѕ Р·Р°Р»РёС€РёР»РёСЃСЏ, 
+	РїСЂРё Р№РѕРіРѕ РїСЂРѕС…РѕРґС– РІ РѕР±РµСЂРЅРµРЅРѕРјСѓ РїРѕСЂСЏРґРєСѓ.
 */
 
 #include <iostream>
@@ -60,7 +60,7 @@ void goToTree(nodePointer tree, nodePointer mainTree)
 		char sign = tree->sign;
 		repeatTree(mainTree, sign, count);
 		if (count > 1) {
-			printf("Елемент %c. Повторів: %d\n", sign, count);
+			printf("Р•Р»РµРјРµРЅС‚ %c. РџРѕРІС‚РѕСЂС–РІ: %d\n", sign, count);
 		}
 		goToTree(tree->l, mainTree);
 		goToTree(tree->r, mainTree);
@@ -71,9 +71,9 @@ void goToTree(nodePointer tree, nodePointer mainTree)
 void main()
 {
 	setlocale(0, "");
-	SetConsoleCP(1251);// установка кодовой страницы win-cp 1251 в поток ввода
-	SetConsoleOutputCP(1251); // установка кодовой страницы win-cp 1251 в поток вывода
-	cout << "Введіть рядок: " << endl;
+	SetConsoleCP(1251);// СѓСЃС‚Р°РЅРѕРІРєР° РєРѕРґРѕРІРѕР№ СЃС‚СЂР°РЅРёС†С‹ win-cp 1251 РІ РїРѕС‚РѕРє РІРІРѕРґР°
+	SetConsoleOutputCP(1251); // СѓСЃС‚Р°РЅРѕРІРєР° РєРѕРґРѕРІРѕР№ СЃС‚СЂР°РЅРёС†С‹ win-cp 1251 РІ РїРѕС‚РѕРє РІС‹РІРѕРґР°
+	cout << "Р’РІРµРґС–С‚СЊ СЂСЏРґРѕРє: " << endl;
 	char text[N];
 	string str;
 	getline(cin, str);
@@ -97,13 +97,13 @@ void main()
 
 
 	
-	//cout << "Повтори: " << endl;
+	//cout << "РџРѕРІС‚РѕСЂРё: " << endl;
 	//goToTree(myTree);
 	//printToEnd(myTree);
 	//cout << endl;
 	
 	/*printToEnd(myTree);
-	cout << "Знайти число: " << endl;
+	cout << "Р—РЅР°Р№С‚Рё С‡РёСЃР»Рѕ: " << endl;
 	char input[10];
 	cin >> input;
 	int val = atoi(input);
@@ -112,7 +112,7 @@ void main()
 	cout << endl;
 	int max = myTree->val;
 	maxValueOfTree(myTree, max);
-	cout << "Максимальне значення: " << max << endl;*/
+	cout << "РњР°РєСЃРёРјР°Р»СЊРЅРµ Р·РЅР°С‡РµРЅРЅСЏ: " << max << endl;*/
 	system("pause");
 }
 
@@ -164,7 +164,7 @@ tree->r->sign = sign;
 
 void createArray(int arr[N], int &n)
 {
-	printf("Введіть довжину массиву: ");
+	printf("Р’РІРµРґС–С‚СЊ РґРѕРІР¶РёРЅСѓ РјР°СЃСЃРёРІСѓ: ");
 	scanf_s("%d", &n);
 	for (int i = 0; i < n; i++) {
 		scanf_s("%d", &arr[i]);
@@ -227,7 +227,7 @@ void enterTree(nodePointer &tree)
 {
 	char input[10];
 	int val = 0;
-	cout << "Введіть значення дерева: " << endl;
+	cout << "Р’РІРµРґС–С‚СЊ Р·РЅР°С‡РµРЅРЅСЏ РґРµСЂРµРІР°: " << endl;
 	cin >> input;
 	while (true) {
 		if (input[0] < '0' || input[0] > '9') break;
@@ -326,7 +326,7 @@ void goToTree(nodePointer tree)
 		int val = tree->val;
 		repeatTree(tree, val, count);
 		if (count > 1) {
-			cout << "Елемент " << val << ". Повторів: " << count << endl;
+			cout << "Р•Р»РµРјРµРЅС‚ " << val << ". РџРѕРІС‚РѕСЂС–РІ: " << count << endl;
 		}
 	}
 	goToTree(tree->l);

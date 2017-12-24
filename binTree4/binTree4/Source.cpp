@@ -1,6 +1,6 @@
 /*
-4. Побудувати двійкове дерево пошуку з цілих чисел, що вводиться. Вивести його на екран у вигляді дерева. 
-	Знайти вершину, яка містить задане число. Визначити максимальний елемент у цьому дереві.
+4. РџРѕР±СѓРґСѓРІР°С‚Рё РґРІС–Р№РєРѕРІРµ РґРµСЂРµРІРѕ РїРѕС€СѓРєСѓ Р· С†С–Р»РёС… С‡РёСЃРµР», С‰Рѕ РІРІРѕРґРёС‚СЊСЃСЏ. Р’РёРІРµСЃС‚Рё Р№РѕРіРѕ РЅР° РµРєСЂР°РЅ Сѓ РІРёРіР»СЏРґС– РґРµСЂРµРІР°. 
+	Р—РЅР°Р№С‚Рё РІРµСЂС€РёРЅСѓ, СЏРєР° РјС–СЃС‚РёС‚СЊ Р·Р°РґР°РЅРµ С‡РёСЃР»Рѕ. Р’РёР·РЅР°С‡РёС‚Рё РјР°РєСЃРёРјР°Р»СЊРЅРёР№ РµР»РµРјРµРЅС‚ Сѓ С†СЊРѕРјСѓ РґРµСЂРµРІС–.
 */
 
 #include <iostream>
@@ -16,7 +16,7 @@ typedef struct node {
 
 void createArray(int arr[N], int &n)
 {
-	printf("Введіть довжину массиву: ");
+	printf("Р’РІРµРґС–С‚СЊ РґРѕРІР¶РёРЅСѓ РјР°СЃСЃРёРІСѓ: ");
 	scanf_s("%d", &n);
 	for (int i = 0; i < n; i++) {
 		scanf_s("%d", &arr[i]);
@@ -79,7 +79,7 @@ void enterTree(nodePointer &tree)
 {
 	char input[10];
 	int val = 0;
-	cout << "Введіть значення дерева: " << endl;
+	cout << "Р’РІРµРґС–С‚СЊ Р·РЅР°С‡РµРЅРЅСЏ РґРµСЂРµРІР°: " << endl;
 	cin >> input;
 	while (true) {
 		if (input[0] < '0' || input[0] > '9') break;
@@ -178,7 +178,7 @@ void goToTree(nodePointer tree)
 		int val = tree->val;
 		repeatTree(tree, val, count);
 		if (count > 1) {
-			cout << "Елемент " << val << ". Повторів: " << count << endl;
+			cout << "Р•Р»РµРјРµРЅС‚ " << val << ". РџРѕРІС‚РѕСЂС–РІ: " << count << endl;
 		}
 	}
 	goToTree(tree->l);
@@ -191,7 +191,7 @@ void main()
 	nodePointer myTree = NULL;
 	enterTree(myTree);
 	printToEnd(myTree);
-	cout << "Знайти число: " << endl;
+	cout << "Р—РЅР°Р№С‚Рё С‡РёСЃР»Рѕ: " << endl;
 	char input[10];
 	cin >> input;
 	int val = atoi(input);
@@ -200,6 +200,6 @@ void main()
 	cout << endl;
 	int max = myTree->val;
 	maxValueOfTree(myTree, max);
-	cout << "Максимальне значення: " << max << endl;
+	cout << "РњР°РєСЃРёРјР°Р»СЊРЅРµ Р·РЅР°С‡РµРЅРЅСЏ: " << max << endl;
 	system("pause");
 }
