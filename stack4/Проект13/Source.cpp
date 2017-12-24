@@ -1,5 +1,5 @@
-/*
-4. Організувати функцію для обчислення арифметичного виразу записаного в постфіксній формі.*/
+п»ї/*
+4. РћСЂРіР°РЅС–Р·СѓРІР°С‚Рё С„СѓРЅРєС†С–СЋ РґР»СЏ РѕР±С‡РёСЃР»РµРЅРЅСЏ Р°СЂРёС„РјРµС‚РёС‡РЅРѕРіРѕ РІРёСЂР°Р·Сѓ Р·Р°РїРёСЃР°РЅРѕРіРѕ РІ РїРѕСЃС‚С„С–РєСЃРЅС–Р№ С„РѕСЂРјС–.*/
 
 #include <iostream>
 #include <string>
@@ -38,7 +38,7 @@ int pop(stackPointer &myStack)
 void print(stackPointer myStack)
 {
 	if (myStack == NULL)
-		cout << "Дані не введені" << endl;
+		cout << "Р”Р°РЅС– РЅРµ РІРІРµРґРµРЅС–" << endl;
 	stackPointer cursor = myStack;
 	while (cursor != NULL) {
 		cout << cursor->value << endl;
@@ -49,12 +49,12 @@ void print(stackPointer myStack)
 void main()
 {
 	setlocale(0, "");
-	// ініціалізація стека
+	// С–РЅС–С†С–Р°Р»С–Р·Р°С†С–СЏ СЃС‚РµРєР°
 	stackPointer myStack;
 	myStack = NULL;
 	char input[10];
 	int val1, val2;
-	cout << "Введіть вираз, вихід - 'q'" << endl;
+	cout << "Р’РІРµРґС–С‚СЊ РІРёСЂР°Р·, РІРёС…С–Рґ - 'q'" << endl;
 	cin >> input;
 	while (input[0] != 'q') {
 
@@ -85,7 +85,7 @@ void main()
 				val2 /= val1;
 			}
 			else {
-				cout << "Ділити на нуль не можна!" << endl;
+				cout << "Р”С–Р»РёС‚Рё РЅР° РЅСѓР»СЊ РЅРµ РјРѕР¶РЅР°!" << endl;
 				break;
 			}
 			push(myStack, val2);

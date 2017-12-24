@@ -1,7 +1,7 @@
-/*
-Массив
-2. Створити чергу дійсних чисел. Обчислити добуток елементів черги. Якщо результат більший за перший елемент черги, то вилучити перший елемент,
-в противному випадку - включити в чергу добуток.
+п»ї/*
+РњР°СЃСЃРёРІ
+2. РЎС‚РІРѕСЂРёС‚Рё С‡РµСЂРіСѓ РґС–Р№СЃРЅРёС… С‡РёСЃРµР». РћР±С‡РёСЃР»РёС‚Рё РґРѕР±СѓС‚РѕРє РµР»РµРјРµРЅС‚С–РІ С‡РµСЂРіРё. РЇРєС‰Рѕ СЂРµР·СѓР»СЊС‚Р°С‚ Р±С–Р»СЊС€РёР№ Р·Р° РїРµСЂС€РёР№ РµР»РµРјРµРЅС‚ С‡РµСЂРіРё, С‚Рѕ РІРёР»СѓС‡РёС‚Рё РїРµСЂС€РёР№ РµР»РµРјРµРЅС‚,
+РІ РїСЂРѕС‚РёРІРЅРѕРјСѓ РІРёРїР°РґРєСѓ - РІРєР»СЋС‡РёС‚Рё РІ С‡РµСЂРіСѓ РґРѕР±СѓС‚РѕРє.
 */
 
 #include <iostream>
@@ -9,7 +9,7 @@
 using namespace std;
 #define N 100
 
-// структура черги (масив)
+// СЃС‚СЂСѓРєС‚СѓСЂР° С‡РµСЂРіРё (РјР°СЃРёРІ)
 typedef struct queue {
 	float value[N];
 	int start;
@@ -18,7 +18,7 @@ typedef struct queue {
 	float dobutok;
 }*queuePointer;
 
-// ініціалізація черги
+// С–РЅС–С†С–Р°Р»С–Р·Р°С†С–СЏ С‡РµСЂРіРё
 void init(queuePointer queue)
 {
 	queue->start = 0;
@@ -27,7 +27,7 @@ void init(queuePointer queue)
 	queue->dobutok = 1;
 }
 
-// додавання елементу в чергу
+// РґРѕРґР°РІР°РЅРЅСЏ РµР»РµРјРµРЅС‚Сѓ РІ С‡РµСЂРіСѓ
 void insertQueue(queuePointer &queue, float num)
 {
 	if (queue->lenght < N) {
@@ -40,12 +40,12 @@ void insertQueue(queuePointer &queue, float num)
 		queue->dobutok *= num;
 	}
 	else {
-		cout << "Черга повна" << endl;
+		cout << "Р§РµСЂРіР° РїРѕРІРЅР°" << endl;
 	}
 }
 void deleteQueue(queuePointer &queue)
 {
-	cout << "Видалення з черги." << endl;
+	cout << "Р’РёРґР°Р»РµРЅРЅСЏ Р· С‡РµСЂРіРё." << endl;
 	queue->value[queue->start] = NULL;
 	queue->start++;
 	queue->lenght--;
@@ -53,7 +53,7 @@ void deleteQueue(queuePointer &queue)
 
 void printQueue(queuePointer queue)
 {
-	cout << "Друк черги." << endl;
+	cout << "Р”СЂСѓРє С‡РµСЂРіРё." << endl;
 	for (int i = 0; i < queue->lenght; i++) {
 		cout << queue->value[(queue->start + i) % N] << endl;
 	}
@@ -64,10 +64,10 @@ void main()
 	setlocale(0, "");
 	queuePointer myQueue = new queue;
 	init(myQueue);
-	cout << "Введіть елементи черги (вихід - 'q')" << endl;
+	cout << "Р’РІРµРґС–С‚СЊ РµР»РµРјРµРЅС‚Рё С‡РµСЂРіРё (РІРёС…С–Рґ - 'q')" << endl;
 	char c[10];
 	while (true) {
-		cout << "Введіть число: " << endl;
+		cout << "Р’РІРµРґС–С‚СЊ С‡РёСЃР»Рѕ: " << endl;
 		cin >> c;
 		float num = atof(c);
 		if (c[0] == 'q') break;

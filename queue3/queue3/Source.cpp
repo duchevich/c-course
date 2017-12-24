@@ -1,6 +1,6 @@
-/*
-Массив
-3. Із заданої цілочисельної черги організувати дві: перша містить всі додатні елементи даної черги, друга - відємні.  
+п»ї/*
+РњР°СЃСЃРёРІ
+3. Р†Р· Р·Р°РґР°РЅРѕС— С†С–Р»РѕС‡РёСЃРµР»СЊРЅРѕС— С‡РµСЂРіРё РѕСЂРіР°РЅС–Р·СѓРІР°С‚Рё РґРІС–: РїРµСЂС€Р° РјС–СЃС‚РёС‚СЊ РІСЃС– РґРѕРґР°С‚РЅС– РµР»РµРјРµРЅС‚Рё РґР°РЅРѕС— С‡РµСЂРіРё, РґСЂСѓРіР° - РІС–РґС”РјРЅС–.  
 */
 
 #include <iostream>
@@ -8,7 +8,7 @@
 using namespace std;
 #define N 100
 
-// структура черги (масив)
+// СЃС‚СЂСѓРєС‚СѓСЂР° С‡РµСЂРіРё (РјР°СЃРёРІ)
 typedef struct queue {
 	int value[N];
 	int start;
@@ -16,7 +16,7 @@ typedef struct queue {
 	int lenght;
 }*queuePointer;
 
-// ініціалізація черги
+// С–РЅС–С†С–Р°Р»С–Р·Р°С†С–СЏ С‡РµСЂРіРё
 void init(queuePointer queue)
 {
 	queue->start = 0;
@@ -24,7 +24,7 @@ void init(queuePointer queue)
 	queue->lenght = 0;
 }
 
-// додавання елементу в чергу
+// РґРѕРґР°РІР°РЅРЅСЏ РµР»РµРјРµРЅС‚Сѓ РІ С‡РµСЂРіСѓ
 void push(queuePointer &queue, int num)
 {
 	if (queue->lenght < N) {
@@ -36,7 +36,7 @@ void push(queuePointer &queue, int num)
 		queue->value[queue->end] = num;
 	}
 	else {
-		cout << "Черга повна" << endl;
+		cout << "Р§РµСЂРіР° РїРѕРІРЅР°" << endl;
 	}
 }
 int pop(queuePointer &queue)
@@ -50,7 +50,7 @@ int pop(queuePointer &queue)
 
 void printQueue(queuePointer queue)
 {
-	cout << "Друк черги." << endl;
+	cout << "Р”СЂСѓРє С‡РµСЂРіРё." << endl;
 	for (int i = 0; i < queue->lenght; i++) {
 		cout << queue->value[(queue->start + i) % N] << endl;
 	}
@@ -65,10 +65,10 @@ void main()
 	init(myQueue);
 	init(plus);
 	init(minus);
-	cout << "Введіть елементи черги (вихід - 'q')" << endl;
+	cout << "Р’РІРµРґС–С‚СЊ РµР»РµРјРµРЅС‚Рё С‡РµСЂРіРё (РІРёС…С–Рґ - 'q')" << endl;
 	char c[10];
 	while (true) {
-		cout << "Введіть число: " << endl;
+		cout << "Р’РІРµРґС–С‚СЊ С‡РёСЃР»Рѕ: " << endl;
 		cin >> c;
 		float num = atof(c);
 		if (c[0] == 'q') break;

@@ -1,6 +1,6 @@
-/*
-	Массив
-	1. Створити чергу з цілих чисел. Організувати функцію створення черги, додавання та вилучення елементу черги. Роздрукувати    
+п»ї/*
+	РњР°СЃСЃРёРІ
+	1. РЎС‚РІРѕСЂРёС‚Рё С‡РµСЂРіСѓ Р· С†С–Р»РёС… С‡РёСЃРµР». РћСЂРіР°РЅС–Р·СѓРІР°С‚Рё С„СѓРЅРєС†С–СЋ СЃС‚РІРѕСЂРµРЅРЅСЏ С‡РµСЂРіРё, РґРѕРґР°РІР°РЅРЅСЏ С‚Р° РІРёР»СѓС‡РµРЅРЅСЏ РµР»РµРјРµРЅС‚Сѓ С‡РµСЂРіРё. Р РѕР·РґСЂСѓРєСѓРІР°С‚Рё    
 */
 
 #include <iostream>
@@ -8,7 +8,7 @@
 using namespace std;
 #define N 5
 
-// структура черги (масив)
+// СЃС‚СЂСѓРєС‚СѓСЂР° С‡РµСЂРіРё (РјР°СЃРёРІ)
 typedef struct queue {
 	int value[N];
 	int start;
@@ -16,7 +16,7 @@ typedef struct queue {
 	int lenght;
 }*queuePointer;
 
-// ініціалізація черги
+// С–РЅС–С†С–Р°Р»С–Р·Р°С†С–СЏ С‡РµСЂРіРё
 void init(queuePointer queue)
 {
 	queue->start = 0;
@@ -24,12 +24,12 @@ void init(queuePointer queue)
 	queue->lenght = 0;
 }
 
-// додавання елементу в чергу
+// РґРѕРґР°РІР°РЅРЅСЏ РµР»РµРјРµРЅС‚Сѓ РІ С‡РµСЂРіСѓ
 void insertQueue(queuePointer &queue)
 {
 	if (queue->lenght < N) {
 		char input[10];
-		cout << "Введіть число: " << endl;
+		cout << "Р’РІРµРґС–С‚СЊ С‡РёСЃР»Рѕ: " << endl;
 		cin >> input;
 		queue->end++;
 		if (queue->end == N) {
@@ -39,12 +39,12 @@ void insertQueue(queuePointer &queue)
 		queue->value[queue->end] = atoi(input);
 	}
 	else {
-		cout << "Черга повна" << endl;
+		cout << "Р§РµСЂРіР° РїРѕРІРЅР°" << endl;
 	}
 }
 void deleteQueue(queuePointer &queue)
 {
-	cout << "Видалення з черги." << endl;
+	cout << "Р’РёРґР°Р»РµРЅРЅСЏ Р· С‡РµСЂРіРё." << endl;
 	queue->value[queue->start] = NULL;
 	queue->start++;
 	queue->lenght--;
@@ -52,7 +52,7 @@ void deleteQueue(queuePointer &queue)
 
 void printQueue(queuePointer queue)
 {
-	cout << "Друк черги." << endl;
+	cout << "Р”СЂСѓРє С‡РµСЂРіРё." << endl;
 	for (int i = 0; i < queue->lenght; i++) {
 		cout << queue->value[(queue->start + i) % N] << endl;
 		
@@ -64,7 +64,7 @@ void main()
 	setlocale(0, "");
 	queuePointer myQueue = new queue;
 	init(myQueue);
-	cout << "Робота з чергою: ввести елемент - 'e', видалити елемент - 'd', друк черги - 'p', вихід - 'q'" << endl;
+	cout << "Р РѕР±РѕС‚Р° Р· С‡РµСЂРіРѕСЋ: РІРІРµСЃС‚Рё РµР»РµРјРµРЅС‚ - 'e', РІРёРґР°Р»РёС‚Рё РµР»РµРјРµРЅС‚ - 'd', РґСЂСѓРє С‡РµСЂРіРё - 'p', РІРёС…С–Рґ - 'q'" << endl;
 	char c = NULL;
 	while (c == 'e' || c == 'd' || c == 'p' || c != 'q') {
 		cin >> c;

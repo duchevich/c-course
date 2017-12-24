@@ -1,13 +1,13 @@
-/*
-Массив
-4. Створити чергу цілих чисел. Якщо перший елемент черги мінімальний - вилучити його з черги, в противному випадку - помістити в кінець черги
+п»ї/*
+РњР°СЃСЃРёРІ
+4. РЎС‚РІРѕСЂРёС‚Рё С‡РµСЂРіСѓ С†С–Р»РёС… С‡РёСЃРµР». РЇРєС‰Рѕ РїРµСЂС€РёР№ РµР»РµРјРµРЅС‚ С‡РµСЂРіРё РјС–РЅС–РјР°Р»СЊРЅРёР№ - РІРёР»СѓС‡РёС‚Рё Р№РѕРіРѕ Р· С‡РµСЂРіРё, РІ РїСЂРѕС‚РёРІРЅРѕРјСѓ РІРёРїР°РґРєСѓ - РїРѕРјС–СЃС‚РёС‚Рё РІ РєС–РЅРµС†СЊ С‡РµСЂРіРё
 */
 #include <iostream>
 
 using namespace std;
 #define N 100
 
-// структура черги (масив)
+// СЃС‚СЂСѓРєС‚СѓСЂР° С‡РµСЂРіРё (РјР°СЃРёРІ)
 typedef struct queue {
 	int value[N];
 	int start;
@@ -16,7 +16,7 @@ typedef struct queue {
 	int min;
 }*queuePointer;
 
-// ініціалізація черги
+// С–РЅС–С†С–Р°Р»С–Р·Р°С†С–СЏ С‡РµСЂРіРё
 void init(queuePointer queue)
 {
 	queue->start = 0;
@@ -24,7 +24,7 @@ void init(queuePointer queue)
 	queue->lenght = 0;
 }
 
-// додавання елементу в чергу
+// РґРѕРґР°РІР°РЅРЅСЏ РµР»РµРјРµРЅС‚Сѓ РІ С‡РµСЂРіСѓ
 void push(queuePointer &queue, int num)
 {
 	if (queue->lenght < N) {
@@ -36,7 +36,7 @@ void push(queuePointer &queue, int num)
 		queue->value[queue->end] = num;
 	}
 	else {
-		cout << "Черга повна" << endl;
+		cout << "Р§РµСЂРіР° РїРѕРІРЅР°" << endl;
 	}
 }
 int pop(queuePointer &queue)
@@ -50,7 +50,7 @@ int pop(queuePointer &queue)
 
 void printQueue(queuePointer queue)
 {
-	cout << "Друк черги." << endl;
+	cout << "Р”СЂСѓРє С‡РµСЂРіРё." << endl;
 	for (int i = 0; i < queue->lenght; i++) {
 		cout << queue->value[(queue->start + i) % N] << endl;
 	}
@@ -61,11 +61,11 @@ void main()
 	setlocale(0, "");
 	queuePointer myQueue = new queue;
 	init(myQueue);
-	cout << "Введіть елементи черги (вихід - 'q')" << endl;
+	cout << "Р’РІРµРґС–С‚СЊ РµР»РµРјРµРЅС‚Рё С‡РµСЂРіРё (РІРёС…С–Рґ - 'q')" << endl;
 	char c[10];
 	int min = 0;
 	while (true) {
-		cout << "Введіть число: " << endl;
+		cout << "Р’РІРµРґС–С‚СЊ С‡РёСЃР»Рѕ: " << endl;
 		cin >> c;
 		int num = atoi(c);
 		if (c[0] == 'q') break;

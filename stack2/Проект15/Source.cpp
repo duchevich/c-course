@@ -1,6 +1,6 @@
-/*
-2. Організувати перевірку збалансованості дужок при вводі виразу за допомогою стеку. Дужки можуть
-бути різні: ( ), [ ], { }.
+п»ї/*
+2. РћСЂРіР°РЅС–Р·СѓРІР°С‚Рё РїРµСЂРµРІС–СЂРєСѓ Р·Р±Р°Р»Р°РЅСЃРѕРІР°РЅРѕСЃС‚С– РґСѓР¶РѕРє РїСЂРё РІРІРѕРґС– РІРёСЂР°Р·Сѓ Р·Р° РґРѕРїРѕРјРѕРіРѕСЋ СЃС‚РµРєСѓ. Р”СѓР¶РєРё РјРѕР¶СѓС‚СЊ
+Р±СѓС‚Рё СЂС–Р·РЅС–: ( ), [ ], { }.
 */
 
 #include <iostream>
@@ -30,7 +30,7 @@ void push(stackPointer myStack, char sign)
 char pop(stackPointer myStack)
 {
 	if (myStack->index == 0) {
-		cout << "Стек порожній" << endl;
+		cout << "РЎС‚РµРє РїРѕСЂРѕР¶РЅС–Р№" << endl;
 		return -1;
 	}
 	char val = myStack->sign[myStack->index-1];
@@ -53,7 +53,7 @@ void main()
 	string text;
 	char s;
 	bool flag = true;
-	cout << "Введіть текст: " << endl;
+	cout << "Р’РІРµРґС–С‚СЊ С‚РµРєСЃС‚: " << endl;
 	getline(cin, text);
 	int len = text.length();
 	for (int i = 0; i < len; i++) {
@@ -82,7 +82,7 @@ void main()
 			}
 
 			if (flag == false) {
-				cout << "Дужки не збалансовані" << endl;
+				cout << "Р”СѓР¶РєРё РЅРµ Р·Р±Р°Р»Р°РЅСЃРѕРІР°РЅС–" << endl;
 				break;
 			}
 		}
