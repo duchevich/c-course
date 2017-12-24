@@ -3,7 +3,7 @@
 
 void figure::setFigure(int v, int h, bool c) {
 	if (v < 0 || v > 7 || h < 0 || h > 7) {
-		std::cout << "Íåâ³ğí³ äàí³" << std::endl;
+		std::cout << "ĞĞµĞ²Ñ–Ñ€Ğ½Ñ– Ğ´Ğ°Ğ½Ñ–" << std::endl;
 	}
 	else {
 		ver = v;
@@ -32,7 +32,7 @@ bool figure::stepToLeft() {
 			return true;
 		}
 		else {
-			std::cout << "Õ³ä íåìîæëèâèé" << ver << std::endl;
+			std::cout << "Ğ¥Ñ–Ğ´ Ğ½ĞµĞ¼Ğ¾Ğ¶Ğ»Ğ¸Ğ²Ğ¸Ğ¹" << ver << std::endl;
 			return false;
 		}
 
@@ -44,7 +44,7 @@ bool figure::stepToLeft() {
 			return true;
 		}
 		else {
-			std::cout << "Õ³ä íåìîæëèâèé" << ver << std::endl;
+			std::cout << "Ğ¥Ñ–Ğ´ Ğ½ĞµĞ¼Ğ¾Ğ¶Ğ»Ğ¸Ğ²Ğ¸Ğ¹" << ver << std::endl;
 			return false;
 		}
 	}
@@ -58,7 +58,7 @@ bool figure::stepToRight() {
 			return true;
 		}
 		else {
-			std::cout << "Õ³ä íåìîæëèâèé" << ver << std::endl;
+			std::cout << "Ğ¥Ñ–Ğ´ Ğ½ĞµĞ¼Ğ¾Ğ¶Ğ»Ğ¸Ğ²Ğ¸Ğ¹" << ver << std::endl;
 			return false;
 		}
 	}
@@ -69,7 +69,7 @@ bool figure::stepToRight() {
 			return true;
 		}
 		else {
-			std::cout << "Õ³ä íåìîæëèâèé" << ver << std::endl;
+			std::cout << "Ğ¥Ñ–Ğ´ Ğ½ĞµĞ¼Ğ¾Ğ¶Ğ»Ğ¸Ğ²Ğ¸Ğ¹" << ver << std::endl;
 			return false;
 		}
 	}

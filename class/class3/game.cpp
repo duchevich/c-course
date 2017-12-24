@@ -11,10 +11,10 @@ game::~game() {};
 
 void game::setGame() {
 	char input[100];
-	std::cout << "Ââåä³òü ³ìÿ ãðàâöÿ, ùî ãðàº á³ëèìè øàøêàìè" << std::endl;
+	std::cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ñ–Ð¼Ñ Ð³Ñ€Ð°Ð²Ñ†Ñ, Ñ‰Ð¾ Ð³Ñ€Ð°Ñ” Ð±Ñ–Ð»Ð¸Ð¼Ð¸ ÑˆÐ°ÑˆÐºÐ°Ð¼Ð¸" << std::endl;
 	std::cin >> input;
 	play[0].setPlayer(input, true);
-	std::cout << "Ââåä³òü ³ìÿ ãðàâöÿ, ùî ãðàº ÷îðíèìè øàøêàìè" << std::endl;
+	std::cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ñ–Ð¼Ñ Ð³Ñ€Ð°Ð²Ñ†Ñ, Ñ‰Ð¾ Ð³Ñ€Ð°Ñ” Ñ‡Ð¾Ñ€Ð½Ð¸Ð¼Ð¸ ÑˆÐ°ÑˆÐºÐ°Ð¼Ð¸" << std::endl;
 	std::cin >> input;
 	play[1].setPlayer(input, false);
 };
@@ -64,11 +64,11 @@ void game::playGame() {
 		printScreen();
 		std::cout << std::endl;
 		if (play[0].count == 0) {
-			std::cout << "Á³ë³ ïðîãðàëè" << std::endl;
+			std::cout << "Ð‘Ñ–Ð»Ñ– Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð»Ð¸" << std::endl;
 			break;
 		}
 		if (play[1].count == 0) {
-			std::cout << "×îðí³ ïðîãðàëè" << std::endl;
+			std::cout << "Ð§Ð¾Ñ€Ð½Ñ– Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð»Ð¸" << std::endl;
 			break;
 		}
 		play[0].step();

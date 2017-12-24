@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 #include "checker.h"
 #include "king.h"
 #include "player.h"
@@ -43,7 +43,7 @@ void player::initCkrBlack() {
 };
 
 player::player() {
-	name = "Гравець 1";
+	name = "Р“СЂР°РІРµС†СЊ 1";
 	color = true;
 	count = 12;
 	initCkrWhite();
@@ -94,20 +94,20 @@ void player::printCheckArr() {
 };
 
 void player::step() {
-	std::cout << "Введіть номер шашки:" << std::endl;
+	std::cout << "Р’РІРµРґС–С‚СЊ РЅРѕРјРµСЂ С€Р°С€РєРё:" << std::endl;
 	char input[2];
 	char myStep;
 	int num = 0;
 	scanf_s("%d", &num);
 	if (num < 0 || num > 11) {
-		std::cout << "Невірний номер шашки (нумерація шашок від 0 до 11)" << std::endl;
+		std::cout << "РќРµРІС–СЂРЅРёР№ РЅРѕРјРµСЂ С€Р°С€РєРё (РЅСѓРјРµСЂР°С†С–СЏ С€Р°С€РѕРє РІС–Рґ 0 РґРѕ 11)" << std::endl;
 		step();
 	}
 	if (ckr[num].exist == false) {
-		std::cout << "Ця шашка бита" << std::endl;
+		std::cout << "Р¦СЏ С€Р°С€РєР° Р±РёС‚Р°" << std::endl;
 	}
 	if (ckr[num].king == false) {
-		std::cout << "Введіть напрямок ходу (вліво - l, вправо - r)" << std::endl;
+		std::cout << "Р’РІРµРґС–С‚СЊ РЅР°РїСЂСЏРјРѕРє С…РѕРґСѓ (РІР»С–РІРѕ - l, РІРїСЂР°РІРѕ - r)" << std::endl;
 		std::cin >> myStep;
 		while (true) {
 			if (myStep == 'l' || myStep == 'r') {
@@ -115,7 +115,7 @@ void player::step() {
 				break;
 			}
 			else {
-				std::cout << "Невірний напрямок ходу (вліво - l, вправо - r)" << std::endl;
+				std::cout << "РќРµРІС–СЂРЅРёР№ РЅР°РїСЂСЏРјРѕРє С…РѕРґСѓ (РІР»С–РІРѕ - l, РІРїСЂР°РІРѕ - r)" << std::endl;
 				std::cin >> myStep;
 			}
 		}
