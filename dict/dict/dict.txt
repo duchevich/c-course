@@ -1,0 +1,8 @@
+дім - home
+книга - book
+один - one
+два - two
+три - three
+чотири - four
+пять - five
+дерево - tree
