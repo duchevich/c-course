@@ -1,11 +1,11 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 int main()
 {
 	// ex 5
 	setlocale(0, "");
 	int num;
-	cout << "Ââåäèòå 4-çíà÷íîå ÷èñëî:";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 4-Ğ·Ğ½Ğ°Ñ‡Ğ½Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾:";
 	cin >> num;
 	int a = num / 1000;
 	int b = (num % 1000) / 100;
@@ -24,7 +24,7 @@ int main()
 	// ex 4
 	/*setlocale(0, "");
 	int num;
-	cout << "Ââåäèòå òğåõçíà÷íîå ÷èñëî:";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ñ‚Ñ€ĞµÑ…Ğ·Ğ½Ğ°Ñ‡Ğ½Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾:";
 	cin >> num;
 	int a = num / 100;
 	int b = (num % 100) / 10;
@@ -41,7 +41,7 @@ int main()
 	// ex 3
 	/*setlocale(0, "");
 	int num1, num2, num3;
-	cout << "Ââåäèòå òğè ëşáûõ ÷èñëà:";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ñ‚Ñ€Ğ¸ Ğ»ÑĞ±Ñ‹Ñ… Ñ‡Ğ¸ÑĞ»Ğ°:";
 	cin >> num1;
 	cin >> num2;
 	cin >> num3;
@@ -52,7 +52,7 @@ int main()
 
 	// ex 2
 	/*double num;
-	cout << "Ââåäèòå ëşáoå ÷èñëî:";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ»ÑĞ±oĞµ Ñ‡Ğ¸ÑĞ»Ğ¾:";
 	cin >> num;
 	int res1 = pow(num, 3.0);
 	int res2 = pow(num, 5.0);
@@ -66,11 +66,11 @@ int main()
 	// ex 1
 	/*
 	int num1, num2, num3;
-	cout << "Ââåäèòå ëşáoå ÷èñëî:";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ»ÑĞ±oĞµ Ñ‡Ğ¸ÑĞ»Ğ¾:";
 	cin >> num1;
-	cout << "Ââåäèòå ëşáoå ÷èñëî:";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ»ÑĞ±oĞµ Ñ‡Ğ¸ÑĞ»Ğ¾:";
 	cin >> num2;
-	cout << "Ââåäèòå ëşáoå ÷èñëî:";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ»ÑĞ±oĞµ Ñ‡Ğ¸ÑĞ»Ğ¾:";
 	cin >> num3;
 	if ((num1 % 2 == 0) && (num2 % 2 == 0) && (num3 % 2 == 0)) {
 		cout << "Yes" << endl;
@@ -83,12 +83,12 @@ int main()
 	// ex 
 	/*setlocale(0, "");
 	double num;
-	cout << "Ââåäèòå ëşáå ÷èñëî:";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ»ÑĞ±Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾:";
 	cin >> num;
 	if (num > 10)
-		cout << "×èñëo áîëüøå 10" << endl;
+		cout << "Ğ§Ğ¸ÑĞ»o Ğ±Ğ¾Ğ»ÑŒÑˆĞµ 10" << endl;
 	else
-		cout << "×èñëî ìåíüøå èëè ğàâíî 10" << endl;
+		cout << "Ğ§Ğ¸ÑĞ»Ğ¾ Ğ¼ĞµĞ½ÑŒÑˆĞµ Ğ¸Ğ»Ğ¸ Ñ€Ğ°Ğ²Ğ½Ğ¾ 10" << endl;
 	system("pause");
 	return 0;*/
 }

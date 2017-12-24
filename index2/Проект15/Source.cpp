@@ -1,7 +1,7 @@
-/*
-2. На вході задано лінійний список М із n цілих чисел. Відомо, що більшість елементів цього списку
-	рівні нулю. Організувати зв’язане стисле зберігання цього списку, функцію пошуку і-ого елементу і
-	перевірити чи співпадає він з мінімальним елементом списку.
+п»ї/*
+2. РќР° РІС…РѕРґС– Р·Р°РґР°РЅРѕ Р»С–РЅС–Р№РЅРёР№ СЃРїРёСЃРѕРє Рњ С–Р· n С†С–Р»РёС… С‡РёСЃРµР». Р’С–РґРѕРјРѕ, С‰Рѕ Р±С–Р»СЊС€С–СЃС‚СЊ РµР»РµРјРµРЅС‚С–РІ С†СЊРѕРіРѕ СЃРїРёСЃРєСѓ
+	СЂС–РІРЅС– РЅСѓР»СЋ. РћСЂРіР°РЅС–Р·СѓРІР°С‚Рё Р·РІвЂ™СЏР·Р°РЅРµ СЃС‚РёСЃР»Рµ Р·Р±РµСЂС–РіР°РЅРЅСЏ С†СЊРѕРіРѕ СЃРїРёСЃРєСѓ, С„СѓРЅРєС†С–СЋ РїРѕС€СѓРєСѓ С–-РѕРіРѕ РµР»РµРјРµРЅС‚Сѓ С–
+	РїРµСЂРµРІС–СЂРёС‚Рё С‡Рё СЃРїС–РІРїР°РґР°С” РІС–РЅ Р· РјС–РЅС–РјР°Р»СЊРЅРёРј РµР»РµРјРµРЅС‚РѕРј СЃРїРёСЃРєСѓ.
 */
 
 #include <iostream>
@@ -21,7 +21,7 @@ void createList(nodePointer &myList, int qlt, int &min)
 {
 	char input[10];
 	int value = 0;
-	cout << "Введіть списoк:" << endl;
+	cout << "Р’РІРµРґС–С‚СЊ СЃРїРёСЃoРє:" << endl;
 	for (int i = 0; i < qlt; i++) {
 		
 		cin >> input;
@@ -42,7 +42,7 @@ void printList(nodePointer myList)
 {
 	nodePointer cursor;
 	if (myList == NULL) {
-		cout << "Дані не введені" << endl;
+		cout << "Р”Р°РЅС– РЅРµ РІРІРµРґРµРЅС–" << endl;
 	}
 	else {
 		cursor = myList;
@@ -56,15 +56,15 @@ void printList(nodePointer myList)
 
 void search(nodePointer &myList, int qlt, int &min)
 {
-	cout << "Введіть індекс елементу:" << endl;
+	cout << "Р’РІРµРґС–С‚СЊ С–РЅРґРµРєСЃ РµР»РµРјРµРЅС‚Сѓ:" << endl;
 	char input[10];
 	int value = 0;
 	cin >> input;
 	value = atoi(input);
 	if((value >= qlt) || (value < 0))
-		cout << "Такого індексу немає в списку:" << endl;
+		cout << "РўР°РєРѕРіРѕ С–РЅРґРµРєСЃСѓ РЅРµРјР°С” РІ СЃРїРёСЃРєСѓ:" << endl;
 	if (myList == NULL) {
-		cout << "Порожній список!" << endl;
+		cout << "РџРѕСЂРѕР¶РЅС–Р№ СЃРїРёСЃРѕРє!" << endl;
 	}
 	else {
 		nodePointer cursor;
@@ -74,7 +74,7 @@ void search(nodePointer &myList, int qlt, int &min)
 			if (cursor->index == value) {
 				cout << cursor->value << endl;
 				if (cursor->value == min) {
-					cout << "Число є мінімальним" << endl;
+					cout << "Р§РёСЃР»Рѕ С” РјС–РЅС–РјР°Р»СЊРЅРёРј" << endl;
 				}
 				break;
 			}
@@ -91,7 +91,7 @@ void main()
 	int qlt = 0;
 	int min = 0;
 	char input[10];
-	cout << "Введіть розмір списку" << endl;
+	cout << "Р’РІРµРґС–С‚СЊ СЂРѕР·РјС–СЂ СЃРїРёСЃРєСѓ" << endl;
 	cin >> input;
 	qlt = atoi(input);
 	nodePointer myList = NULL;

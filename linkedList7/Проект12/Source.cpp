@@ -1,6 +1,6 @@
-/*
-7. Дана послідовність символів, що закінчується крапкою. Видалити всі символи, у яких рівні сусіди 
-	(перший і останній символи вважати за сусідів) і переставити в зворотному порядку всі символи між першим і останнім входженнями заданого символу.
+п»ї/*
+7. Р”Р°РЅР° РїРѕСЃР»С–РґРѕРІРЅС–СЃС‚СЊ СЃРёРјРІРѕР»С–РІ, С‰Рѕ Р·Р°РєС–РЅС‡СѓС”С‚СЊСЃСЏ РєСЂР°РїРєРѕСЋ. Р’РёРґР°Р»РёС‚Рё РІСЃС– СЃРёРјРІРѕР»Рё, Сѓ СЏРєРёС… СЂС–РІРЅС– СЃСѓСЃС–РґРё 
+	(РїРµСЂС€РёР№ С– РѕСЃС‚Р°РЅРЅС–Р№ СЃРёРјРІРѕР»Рё РІРІР°Р¶Р°С‚Рё Р·Р° СЃСѓСЃС–РґС–РІ) С– РїРµСЂРµСЃС‚Р°РІРёС‚Рё РІ Р·РІРѕСЂРѕС‚РЅРѕРјСѓ РїРѕСЂСЏРґРєСѓ РІСЃС– СЃРёРјРІРѕР»Рё РјС–Р¶ РїРµСЂС€РёРј С– РѕСЃС‚Р°РЅРЅС–Рј РІС…РѕРґР¶РµРЅРЅСЏРјРё Р·Р°РґР°РЅРѕРіРѕ СЃРёРјРІРѕР»Сѓ.
 */
 
 #include <iostream>
@@ -18,7 +18,7 @@ void enterList(listPointer &firstNode, listPointer &lastNode){
 	listPointer item;
 	lastNode = new list;
 	firstNode = lastNode;
-	cout << "Введiть елементи списку. Крапка - кінець вводу" << endl;
+	cout << "Р’РІРµРґiС‚СЊ РµР»РµРјРµРЅС‚Рё СЃРїРёСЃРєСѓ. РљСЂР°РїРєР° - РєС–РЅРµС†СЊ РІРІРѕРґСѓ" << endl;
 	cin >> lastNode->sign;
 	lastNode->prev = NULL;
 	lastNode->next = NULL;
@@ -39,7 +39,7 @@ void printList(listPointer myList)
 {
 	listPointer cursor;
 	if (myList == NULL) {
-		cout << "Дані не введені" << endl;
+		cout << "Р”Р°РЅС– РЅРµ РІРІРµРґРµРЅС–" << endl;
 	}
 	else {
 		cursor = myList;
@@ -56,7 +56,7 @@ void reverse(listPointer firstNode, listPointer lastNode)
 	listPointer cursorBegin, cursorEnd, tmpEnd, tmpBegin;
 	tmpBegin = new list;
 	tmpEnd = new list;
-	cout << "Введіть символ пошуку: ";
+	cout << "Р’РІРµРґС–С‚СЊ СЃРёРјРІРѕР» РїРѕС€СѓРєСѓ: ";
 	char simbol;
 	cin >> simbol;
 	cursorBegin = firstNode;

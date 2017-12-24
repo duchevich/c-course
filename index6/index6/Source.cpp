@@ -1,4 +1,4 @@
-/*
+ï»¿/*
 6.
 */
 #define _CRT_SECURE_NO_WARNINGS
@@ -28,16 +28,16 @@ void createDict(nodePointer dict[N])
 	char num[10];
 	string eng, ukr;
 	int freq, i;
-	cout << "Ââåä³òü ñëîâíèê('0' - âèõ³ä)" << endl;
+	cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ ÑÐ»Ð¾Ð²Ð½Ð¸Ðº('0' - Ð²Ð¸Ñ…Ñ–Ð´)" << endl;
 	while (true) {
-		cout << "Ââåä³òü àíãë³éñüêå ñëîâî" << endl;
+		cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ð°Ð½Ð³Ð»Ñ–Ð¹ÑÑŒÐºÐµ ÑÐ»Ð¾Ð²Ð¾" << endl;
 		cin >> eng;
 		if (eng[0] == '0') {
 			break;
 		}
-		cout << "Ââåä³òü óêðà¿íñüêèé ïåðåêëàä" << endl;
+		cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ ÑƒÐºÑ€Ð°Ñ—Ð½ÑÑŒÐºÐ¸Ð¹ Ð¿ÐµÑ€ÐµÐºÐ»Ð°Ð´" << endl;
 		cin >> ukr;
-		cout << "Ââåä³òü ÷àñòîòó âèêîðèñòàííÿ" << endl;
+		cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ñ‡Ð°ÑÑ‚Ð¾Ñ‚Ñƒ Ð²Ð¸ÐºÐ¾Ñ€Ð¸ÑÑ‚Ð°Ð½Ð½Ñ" << endl;
 		cin >> num;
 		freq = atoi(num);
 		nodePointer word = new node;
@@ -120,7 +120,7 @@ void main()
 	nodePointer dict[N];
 	initArr(dict);
 	createDict(dict);
-	cout << "Ââåä³òü ðå÷åííÿ àíãë³éñüêîþ ìîâîþ" << endl;
+	cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ñ€ÐµÑ‡ÐµÐ½Ð½Ñ Ð°Ð½Ð³Ð»Ñ–Ð¹ÑÑŒÐºÐ¾ÑŽ Ð¼Ð¾Ð²Ð¾ÑŽ" << endl;
 	string str;
 	cin.ignore();
 	getline(cin, str);

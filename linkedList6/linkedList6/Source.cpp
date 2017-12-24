@@ -1,5 +1,5 @@
-/*
-6. Задано два впорядкованих по зростанню зв’язаних списки. Організувати із них один список, не порушуючи впорядкованості.
+п»ї/*
+6. Р—Р°РґР°РЅРѕ РґРІР° РІРїРѕСЂСЏРґРєРѕРІР°РЅРёС… РїРѕ Р·СЂРѕСЃС‚Р°РЅРЅСЋ Р·РІвЂ™СЏР·Р°РЅРёС… СЃРїРёСЃРєРё. РћСЂРіР°РЅС–Р·СѓРІР°С‚Рё С–Р· РЅРёС… РѕРґРёРЅ СЃРїРёСЃРѕРє, РЅРµ РїРѕСЂСѓС€СѓСЋС‡Рё РІРїРѕСЂСЏРґРєРѕРІР°РЅРѕСЃС‚С–.
 */
 
 #include <iostream>
@@ -12,78 +12,78 @@ typedef struct node
 	struct node *next;
 }nodeName, *nodePointer;
 
-// функція для створення та заповнення відсортованого списку цілих чисел
+// С„СѓРЅРєС†С–СЏ РґР»СЏ СЃС‚РІРѕСЂРµРЅРЅСЏ С‚Р° Р·Р°РїРѕРІРЅРµРЅРЅСЏ РІС–РґСЃРѕСЂС‚РѕРІР°РЅРѕРіРѕ СЃРїРёСЃРєСѓ С†С–Р»РёС… С‡РёСЃРµР»
 nodePointer createList()
 {
-	// створення вузлів
+	// СЃС‚РІРѕСЂРµРЅРЅСЏ РІСѓР·Р»С–РІ
 	nodePointer firstNode, unit, lastNode;
 	lastNode = new node;
 	firstNode = lastNode;
-	// створення перемінної для вводу
+	// СЃС‚РІРѕСЂРµРЅРЅСЏ РїРµСЂРµРјС–РЅРЅРѕС— РґР»СЏ РІРІРѕРґСѓ
 	char input[10];
-	cout << "Створення зв’язаного списку цілих чисел" << endl;
-	cout << "Введiть ціле число: ";
+	cout << "РЎС‚РІРѕСЂРµРЅРЅСЏ Р·РІвЂ™СЏР·Р°РЅРѕРіРѕ СЃРїРёСЃРєСѓ С†С–Р»РёС… С‡РёСЃРµР»" << endl;
+	cout << "Р’РІРµРґiС‚СЊ С†С–Р»Рµ С‡РёСЃР»Рѕ: ";
 	cin >> input;
-	// перевірка на ціле число та оголошення перемінної з максимальним значенням списку
+	// РїРµСЂРµРІС–СЂРєР° РЅР° С†С–Р»Рµ С‡РёСЃР»Рѕ С‚Р° РѕРіРѕР»РѕС€РµРЅРЅСЏ РїРµСЂРµРјС–РЅРЅРѕС— Р· РјР°РєСЃРёРјР°Р»СЊРЅРёРј Р·РЅР°С‡РµРЅРЅСЏРј СЃРїРёСЃРєСѓ
 	int maxValue = atoi(input);
-	// перший вузол списку
+	// РїРµСЂС€РёР№ РІСѓР·РѕР» СЃРїРёСЃРєСѓ
 	lastNode->number = maxValue;
 	lastNode->next = NULL;
 	char c;
-	// заповнення списку з сортуванням
-	cout << "Буде наступний елемент? (Y/N) "; cin >> c;
-	// перевірка для закінчення заповнення списку
+	// Р·Р°РїРѕРІРЅРµРЅРЅСЏ СЃРїРёСЃРєСѓ Р· СЃРѕСЂС‚СѓРІР°РЅРЅСЏРј
+	cout << "Р‘СѓРґРµ РЅР°СЃС‚СѓРїРЅРёР№ РµР»РµРјРµРЅС‚? (Y/N) "; cin >> c;
+	// РїРµСЂРµРІС–СЂРєР° РґР»СЏ Р·Р°РєС–РЅС‡РµРЅРЅСЏ Р·Р°РїРѕРІРЅРµРЅРЅСЏ СЃРїРёСЃРєСѓ
 	while ((c == 'y') || (c == 'Y')) {
 		unit = new node;
-		cout << "Введiть ціле число: ";
+		cout << "Р’РІРµРґiС‚СЊ С†С–Р»Рµ С‡РёСЃР»Рѕ: ";
 		cin >> input;
 		int unitValue = atoi(input);
-		// вставка числа в кінець списку
+		// РІСЃС‚Р°РІРєР° С‡РёСЃР»Р° РІ РєС–РЅРµС†СЊ СЃРїРёСЃРєСѓ
 		if (unitValue >= maxValue) {
 			unit->number = unitValue;
 			unit->next = NULL;
 			lastNode->next = unit;
 			lastNode = unit;
 			maxValue = unitValue;
-			cout << "Буде наступний елемент? (Y/N) "; cin >> c;
+			cout << "Р‘СѓРґРµ РЅР°СЃС‚СѓРїРЅРёР№ РµР»РµРјРµРЅС‚? (Y/N) "; cin >> c;
 		}
 		else {
 			nodePointer cursor = firstNode;
 			nodePointer prev = firstNode;
 			bool flag = false;
 			while (flag == false) {
-				// вставка числа на початок списку
+				// РІСЃС‚Р°РІРєР° С‡РёСЃР»Р° РЅР° РїРѕС‡Р°С‚РѕРє СЃРїРёСЃРєСѓ
 				if (firstNode->number >= unitValue) {
 					unit->number = unitValue;
 					unit->next = firstNode;
 					firstNode = unit;
 					flag = true;
 				}
-				// вставка числа в середину списку
+				// РІСЃС‚Р°РІРєР° С‡РёСЃР»Р° РІ СЃРµСЂРµРґРёРЅСѓ СЃРїРёСЃРєСѓ
 				else if (cursor->number >= unitValue) {
 					unit->number = unitValue;
 					unit->next = cursor;
 					prev->next = unit;
 					flag = true;
 				}
-				//  рух по списку
+				//  СЂСѓС… РїРѕ СЃРїРёСЃРєСѓ
 				else {
 					prev = cursor;
 					cursor = cursor->next;
 				}
 			}
-			cout << "Буде наступний елемент? (Y/N) "; cin >> c;
+			cout << "Р‘СѓРґРµ РЅР°СЃС‚СѓРїРЅРёР№ РµР»РµРјРµРЅС‚? (Y/N) "; cin >> c;
 		}
 	}
 	return firstNode;
 }
 
-// функція для друку списку
+// С„СѓРЅРєС†С–СЏ РґР»СЏ РґСЂСѓРєСѓ СЃРїРёСЃРєСѓ
 void print(nodePointer firstNode)
 {
 	nodePointer unit;
 	if (firstNode == NULL) {
-		cout << "Список порожній" << endl;
+		cout << "РЎРїРёСЃРѕРє РїРѕСЂРѕР¶РЅС–Р№" << endl;
 	}
 	else {
 		unit = firstNode;
@@ -95,10 +95,10 @@ void print(nodePointer firstNode)
 	}
 }
 
-// функція для злиття списків
+// С„СѓРЅРєС†С–СЏ РґР»СЏ Р·Р»РёС‚С‚СЏ СЃРїРёСЃРєС–РІ
 nodePointer mergeLists(nodePointer list1, nodePointer list2) {
 	nodePointer list, mainCursor, mainPrevNode, cursor, nextNode, endMainList;
-	// вибір головного списку (мінімальне значення)
+	// РІРёР±С–СЂ РіРѕР»РѕРІРЅРѕРіРѕ СЃРїРёСЃРєСѓ (РјС–РЅС–РјР°Р»СЊРЅРµ Р·РЅР°С‡РµРЅРЅСЏ)
 	if (list1->number < list2->number) {
 		mainCursor = list1;
 		cursor = list2;
@@ -107,9 +107,9 @@ nodePointer mergeLists(nodePointer list1, nodePointer list2) {
 		mainCursor = list2;
 		cursor = list1;
 	}
-	// початок головного списку
+	// РїРѕС‡Р°С‚РѕРє РіРѕР»РѕРІРЅРѕРіРѕ СЃРїРёСЃРєСѓ
 	list = mainCursor;
-	// кінцеве значення головного списку
+	// РєС–РЅС†РµРІРµ Р·РЅР°С‡РµРЅРЅСЏ РіРѕР»РѕРІРЅРѕРіРѕ СЃРїРёСЃРєСѓ
 	int max = list->number;
 	endMainList = mainCursor;
 	while (mainCursor != NULL) {
@@ -117,13 +117,13 @@ nodePointer mergeLists(nodePointer list1, nodePointer list2) {
 		endMainList = mainCursor;
 		mainCursor = mainCursor->next;
 	}
-	// злиття відсортованих списків
+	// Р·Р»РёС‚С‚СЏ РІС–РґСЃРѕСЂС‚РѕРІР°РЅРёС… СЃРїРёСЃРєС–РІ
 	while (cursor != NULL) {
 		mainCursor = list;
 		mainPrevNode = mainCursor;
 		mainCursor = mainCursor->next;
 		
-		// власне злиття списків
+		// РІР»Р°СЃРЅРµ Р·Р»РёС‚С‚СЏ СЃРїРёСЃРєС–РІ
 		while (mainCursor != NULL) {
 			if (cursor->number <= mainCursor->number) {
 				nextNode = cursor->next;
@@ -135,7 +135,7 @@ nodePointer mergeLists(nodePointer list1, nodePointer list2) {
 			mainPrevNode = mainCursor;
 			mainCursor = mainCursor->next;
 		}
-		// приєднання до кінця головного списку допоміжного списку із значеннями, більшими за максимальне значення головного списку
+		// РїСЂРёС”РґРЅР°РЅРЅСЏ РґРѕ РєС–РЅС†СЏ РіРѕР»РѕРІРЅРѕРіРѕ СЃРїРёСЃРєСѓ РґРѕРїРѕРјС–Р¶РЅРѕРіРѕ СЃРїРёСЃРєСѓ С–Р· Р·РЅР°С‡РµРЅРЅСЏРјРё, Р±С–Р»СЊС€РёРјРё Р·Р° РјР°РєСЃРёРјР°Р»СЊРЅРµ Р·РЅР°С‡РµРЅРЅСЏ РіРѕР»РѕРІРЅРѕРіРѕ СЃРїРёСЃРєСѓ
 		if (max <= cursor->number) {
 			cout << max << endl;
 			endMainList->next = cursor;

@@ -1,5 +1,5 @@
-/*
-5. Задано два вектори, які подаються за допомогою зв’язаних списків. Організувати функцію обчислення скалярного добутку цих векторів.
+п»ї/*
+5. Р—Р°РґР°РЅРѕ РґРІР° РІРµРєС‚РѕСЂРё, СЏРєС– РїРѕРґР°СЋС‚СЊСЃСЏ Р·Р° РґРѕРїРѕРјРѕРіРѕСЋ Р·РІвЂ™СЏР·Р°РЅРёС… СЃРїРёСЃРєС–РІ. РћСЂРіР°РЅС–Р·СѓРІР°С‚Рё С„СѓРЅРєС†С–СЋ РѕР±С‡РёСЃР»РµРЅРЅСЏ СЃРєР°Р»СЏСЂРЅРѕРіРѕ РґРѕР±СѓС‚РєСѓ С†РёС… РІРµРєС‚РѕСЂС–РІ.
 */
 
 #include <iostream>
@@ -13,14 +13,14 @@ typedef struct vector
 	struct vector *next;
 }vectorn, *vectorp;
 
-// функція перевірки вводу
+// С„СѓРЅРєС†С–СЏ РїРµСЂРµРІС–СЂРєРё РІРІРѕРґСѓ
 float number() 
 {
 	float val = 0;
 	int error = 0;
 	char input[10];
 	do {
-		if (error != 0) cout << "Введіть корректне значення" << endl;
+		if (error != 0) cout << "Р’РІРµРґС–С‚СЊ РєРѕСЂСЂРµРєС‚РЅРµ Р·РЅР°С‡РµРЅРЅСЏ" << endl;
 		cin >> input;
 		val = atof(input);
 		error++;
@@ -28,19 +28,19 @@ float number()
 	return val;
 }
 
-// функція вводу вектору - звязного списку заданої довжини
+// С„СѓРЅРєС†С–СЏ РІРІРѕРґСѓ РІРµРєС‚РѕСЂСѓ - Р·РІСЏР·РЅРѕРіРѕ СЃРїРёСЃРєСѓ Р·Р°РґР°РЅРѕС— РґРѕРІР¶РёРЅРё
 vectorp enterVector(int lenght)
 {
 	vectorp firstNode, lastNode;
 	lastNode = new vector;
 	firstNode = lastNode;
 	float value;
-	cout << "Введіть 1 значення" << endl;
+	cout << "Р’РІРµРґС–С‚СЊ 1 Р·РЅР°С‡РµРЅРЅСЏ" << endl;
 	lastNode->value = number();
 	lastNode->next = NULL;
 	for (int i = 2; i <= lenght; i++) {
 		vectorp item = new vector;
-		cout << "Введіть " << i << " значення" << endl;
+		cout << "Р’РІРµРґС–С‚СЊ " << i << " Р·РЅР°С‡РµРЅРЅСЏ" << endl;
 		item->value = number();
 		item->next = NULL;
 		lastNode->next = item;
@@ -49,12 +49,12 @@ vectorp enterVector(int lenght)
 	return firstNode;
 }
 
-// функція друку звязного списку
+// С„СѓРЅРєС†С–СЏ РґСЂСѓРєСѓ Р·РІСЏР·РЅРѕРіРѕ СЃРїРёСЃРєСѓ
 void printVector(vectorp myVector)
 {
 	vectorp cursor;
 	if(myVector == NULL) 
-		cout << "Дані не введені" << endl;
+		cout << "Р”Р°РЅС– РЅРµ РІРІРµРґРµРЅС–" << endl;
 	else {
 		cursor = myVector;
 		while (cursor != NULL) {
@@ -65,11 +65,11 @@ void printVector(vectorp myVector)
 	}
 }
 
-// функція обчислення скалярного добутку двох векторів
+// С„СѓРЅРєС†С–СЏ РѕР±С‡РёСЃР»РµРЅРЅСЏ СЃРєР°Р»СЏСЂРЅРѕРіРѕ РґРѕР±СѓС‚РєСѓ РґРІРѕС… РІРµРєС‚РѕСЂС–РІ
 float scalar(vectorp vector1, vectorp vector2, int lenght)
 {
 	if (vector1 == NULL || vector2 == NULL) {
-		cout << "Дані не введені" << endl;
+		cout << "Р”Р°РЅС– РЅРµ РІРІРµРґРµРЅС–" << endl;
 		return 1;
 	}
 	float result = 0;
@@ -90,16 +90,16 @@ float scalar(vectorp vector1, vectorp vector2, int lenght)
 void main()
 {
 	setlocale(0, "");
-	cout << "Введіть розмірність векторів" << endl;
+	cout << "Р’РІРµРґС–С‚СЊ СЂРѕР·РјС–СЂРЅС–СЃС‚СЊ РІРµРєС‚РѕСЂС–РІ" << endl;
 	int len = int(number());
-	cout << "Введіть перший вектор" << endl;
+	cout << "Р’РІРµРґС–С‚СЊ РїРµСЂС€РёР№ РІРµРєС‚РѕСЂ" << endl;
 	vectorp vec1 = enterVector(len);
 	printVector(vec1);
-	cout << "Введіть другий вектор" << endl;
+	cout << "Р’РІРµРґС–С‚СЊ РґСЂСѓРіРёР№ РІРµРєС‚РѕСЂ" << endl;
 	vectorp vec2 = enterVector(len);
 	printVector(vec2);
 	float res = scalar(vec1, vec2, len);
-	cout << "Скалярний добуток данних векторів складає " << res << endl;
+	cout << "РЎРєР°Р»СЏСЂРЅРёР№ РґРѕР±СѓС‚РѕРє РґР°РЅРЅРёС… РІРµРєС‚РѕСЂС–РІ СЃРєР»Р°РґР°С” " << res << endl;
 
 	system("pause");
 }
